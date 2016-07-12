@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="ToDoApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="ok3-gG-Iia" id="reA-Lf-3KG"/>
                 <outlet property="taskTextField" destination="dIq-Kv-n1h" id="4xz-NM-2q7"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -81,6 +82,9 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="okV-Kz-Ng9" name="value" keyPath="objectValue" id="Phq-v7-G5w"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>
