@@ -11,6 +11,8 @@
 		EC9FFFB31D31BB5B00009EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9FFFB21D31BB5B00009EBE /* Assets.xcassets */; };
 		EC9FFFB61D31BB5B00009EBE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9FFFB41D31BB5B00009EBE /* MainMenu.xib */; };
 		EC9FFFC11D31BB5B00009EBE /* ToDoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9FFFC01D31BB5B00009EBE /* ToDoAppTests.swift */; };
+		EC9FFFCD1D31BBA500009EBE /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9FFFCB1D31BBA500009EBE /* MainWindowController.swift */; };
+		EC9FFFCE1D31BBA500009EBE /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9FFFCC1D31BBA500009EBE /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		EC9FFFBC1D31BB5B00009EBE /* ToDoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9FFFC01D31BB5B00009EBE /* ToDoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppTests.swift; sourceTree = "<group>"; };
 		EC9FFFC21D31BB5B00009EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC9FFFCB1D31BBA500009EBE /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		EC9FFFCC1D31BBA500009EBE /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				EC9FFFB21D31BB5B00009EBE /* Assets.xcassets */,
 				EC9FFFB41D31BB5B00009EBE /* MainMenu.xib */,
 				EC9FFFB71D31BB5B00009EBE /* Info.plist */,
+				EC9FFFCB1D31BBA500009EBE /* MainWindowController.swift */,
+				EC9FFFCC1D31BBA500009EBE /* MainWindowController.xib */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC9FFFB31D31BB5B00009EBE /* Assets.xcassets in Resources */,
+				EC9FFFCE1D31BBA500009EBE /* MainWindowController.xib in Resources */,
 				EC9FFFB61D31BB5B00009EBE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9FFFCD1D31BBA500009EBE /* MainWindowController.swift in Sources */,
 				EC9FFFB11D31BB5B00009EBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
