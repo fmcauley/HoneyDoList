@@ -17,7 +17,8 @@ class MainWindowController: NSWindowController, NSTableViewDataSource, NSTableVi
     @IBOutlet weak var taskTextField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
-    // MARK: - IBActions
+    // MARK: - IBActions 
+    /** DOES THIS GET REPLACED WITH THE CALL TO doubleAction on the table view? */
     @IBAction func addButton(_ sender: NSButton) {
         if taskTextField.stringValue.characters.count > 0 {
             // what if the user removes the item from the list?
@@ -28,10 +29,12 @@ class MainWindowController: NSWindowController, NSTableViewDataSource, NSTableVi
         }
         
     }
+    
     @IBAction func updateTask(_ sender: NSTextField) {
         self.todos[self.tableView.selectedRow] = sender.stringValue
         self.tableView.reloadData()
     }
+    
     // MARK: - Life Cycle methods
     override var windowNibName: String {
         return "MainWindowController"
@@ -40,6 +43,11 @@ class MainWindowController: NSWindowController, NSTableViewDataSource, NSTableVi
     override func windowDidLoad() {
         super.windowDidLoad()
         self.todos = Array()
+        tableView.doubleAction = #selector(printName)
+    }
+    
+    @IBAction func printName(sender: AnyObject) {
+        print("sender \(sender)")
     }
     
     // MARK: - NSTableViewDataSource
@@ -52,27 +60,12 @@ class MainWindowController: NSWindowController, NSTableViewDataSource, NSTableVi
         return todo
     }
     
-    func tableView(_ tableView: NSTableView,
-                   setObjectValue object: AnyObject?,
-                   for tableColumn: NSTableColumn?,
-                   row: Int) {
-//        print("WELL HELL \(object)")
-    }
     
     // MARK: - NSTableViewDelegate
-    func tableViewSelectionDidChange(_ notification: Notification) {
-        let row = tableView.selectedRow
-        if row == -1 {
-           //add logic
-            return
-        }
-        print(todos[row])
-    }
-    func tableViewSelectionIsChanging(_ notification: Notification) {
-        //print("\(notification)")
-    }
     
-    func selectionShouldChange(in tableView: NSTableView) -> Bool {
-        return true
-    }
+    // when do I need to emplmenet the blow function? the datasource code above is providing data but the app is also using binding could this be an issue?
+    
+/**   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+ 
+    } */
 }
