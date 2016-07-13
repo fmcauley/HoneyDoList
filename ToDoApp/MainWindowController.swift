@@ -43,7 +43,7 @@ class MainWindowController: NSWindowController, NSTableViewDataSource, NSTableVi
     override func windowDidLoad() {
         super.windowDidLoad()
         self.todos = Array()
-        tableView.doubleAction = #selector(printName)
+        tableView.doubleAction = #selector(printName(sender:))
     }
     
     @IBAction func printName(sender: AnyObject) {
